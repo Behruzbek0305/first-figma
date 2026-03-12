@@ -1,0 +1,141 @@
+.support {
+  background:linear-gradient( to bottom,
+  rgb(21, 27, 61) 0%,
+  rgb(21, 27, 61) 50%,
+  rgb(21, 27, 61) 75%,
+  rgba(21, 27, 61, .95)    100%
+  );
+  &__wrap {
+    padding: 56px 222px 56px 222px;
+    @include d-flex(row, center, center, 48);
+
+    @include media (1280) {
+        gap: 36px;
+        padding: 56px 200px 56px 200px
+    }
+    @include media (1200) {
+        padding: 40px 100px 40px 100px
+    }
+    @include media (1024) {
+        padding: 40px;
+    }
+    @include media (768) {
+        flex-direction: column;
+    }
+    @include media (500) {
+        padding: 18px
+    }
+
+  }
+
+  &__content {
+    @include d-flex(column, unset, center, 12);
+    width: 484px;
+
+    @include media (768) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    color: $white;
+    @include media (500) {
+        font-size:28px ;
+    }
+  }
+
+  &__subtitle {
+    @include d-flex(column, unset, unset, 12);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 139%;
+    color: $white;
+  }
+
+  &__subtitle-text span{
+    font-weight: 500;
+    color: $light-blue;
+  }
+
+  &__input {
+    border-radius: 16px;
+    backdrop-filter: blur(50px);
+    box-shadow: 10px -34px 150px 1px rgba(22, 28, 62, 0.1);
+    background: linear-gradient(
+      144deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    @include d-flex(column, unset, unset, 24);
+    height: 512px;
+    width: 464px;
+    padding: 32px;
+
+    @include media (1024) {
+        width: 444px;
+        padding: 24px;
+    }
+    @include media (900) {
+        width: 400px;
+        padding: 24px;
+        height: 480px;
+    }
+    @include media (768) {
+        width: 100%;
+    }
+  }
+
+  &__input-item {
+    color: $white;
+    padding-left: 16px;
+    border: none;
+    border-radius: 8px;
+    width: 360px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: $font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+
+    &::placeholder {
+      color: rgba(204, 203, 219, 0.6);
+    }
+
+    @include media (900) {
+        width: 320px;
+    }
+    @include media (768) {
+        width: 100%;
+    }
+  }
+
+  &__input-item-message {
+    height: 120px;
+  }
+
+  &__button {
+    align-self: flex-end;
+    border-radius: 8px;
+    padding: 9px 18px;
+    width: 152px;
+    height: 40px;
+    box-shadow: 4px 6px 24px 0 rgba(237, 29, 144, 0.08);
+    background-color:#ed1d90 ;
+    color: $white;
+    border:  1px solid #ed1d90;
+    transition:all .3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: #ed1d90;
+    }
+
+    @include media (450) {
+      width: 100%;
+    }
+  }
+}

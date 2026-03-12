@@ -1,0 +1,91 @@
+.integration {
+  background: $white;
+
+  &__wrap {
+    @include d-flex(row, unset, unset, 32);
+    margin: 56px 100px 56px 100px;
+
+    @include media (1024) {
+        margin: 56px 40px 56px 40px;
+    }
+    
+    @include media (860) {
+        @include d-flex (column, center, center, 32);
+        margin: 40px ;
+    }
+    @include media (460) {
+        @include d-flex (column, center, center, 32);
+        margin: 24px 16px 24px 16px ;
+    }
+  }
+
+  &__content {
+    @include d-flex(column, unset, unset, 12);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    color: $dark-blue;
+
+    @include media (1024) {
+        font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    color: $dark-blue;
+
+    &-text {
+      @include d-flex(row, center, unset, 12);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 137%;
+
+      &--mod {
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 9px 18px;
+    width: 160px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: rgb(237, 29, 144);
+    border: 1px solid rgb(237, 29, 144);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: rgb(237, 29, 144);
+        color: $white;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 324px;
+      width: 324px;
+
+      @include media (400) {
+        width: 100%;
+      }
+    }
+  }
+}

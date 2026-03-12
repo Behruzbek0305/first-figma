@@ -1,0 +1,101 @@
+.footer {
+  background-color: $dark-blue;
+
+  &__wrap {
+    padding: 32px 0 32px 0;
+    @include d-flex(column, unset, unset, 32);
+  }
+
+  &__links {
+    @include d-flex(row, unset, space-between, 24);
+
+    @include media (600) {
+      @include d-flex (column, unset, unset, 24);
+      width: 100%;
+    }
+  }
+
+  &__about {
+    @include d-flex(column, unset, unset, 8);
+
+    @include media (600) {
+      width: 100%;
+    }
+  }
+
+  &__subtitle {
+    max-width: 332px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 137%;
+    color: $light-gray;
+
+    @include media (600) {
+      max-width: 100%;
+    }
+  }
+  &__cards {
+    @include d-flex (row, unset, unset, 24);
+
+    @include media (600) {
+      width: 100%;
+    }
+
+    @include media (450) {
+      @include d-flex (column, unset, unset, 24);
+    }
+  }
+  &__card {
+    @include d-flex(column, unset, unset, 8);
+    width: 282px;
+
+    @include media (1024) {
+        width: 218px;
+    }
+    @include media (768) {
+        width: 154px;
+    }
+
+    @include media (600) {
+      width: 100%;
+    }
+  }
+  &__link-title {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 137%;
+    color: $white;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 137%;
+    color: $light-gray;
+  }
+
+  &__line {
+    background: $light-gray;
+    width: 100%;
+    height: 1px;
+    opacity: 0.2;
+  }
+
+  &__bottom {
+    @include d-flex(row, unset, space-between, 24);
+
+     @include media (450) {
+      @include d-flex (column, unset, unset, 24);
+    }
+  }
+  &__copyright {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 143%;
+    color: $background;
+  }
+  &__icons {
+    @include d-flex (row, unset, unset, 24);
+  }
+}

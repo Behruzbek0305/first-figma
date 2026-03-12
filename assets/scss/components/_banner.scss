@@ -1,0 +1,107 @@
+.banner {
+  background: linear-gradient(
+    to right,
+    rgb(8, 13, 23) 0%,
+    rgb(17, 31, 61) 50%,
+    rgb(33, 86, 209) 100%
+  );
+  &__wrap {
+    @include d-flex(row, center, unset, 64);
+    padding: 75px 150px 75px 150px;
+
+    @include  media (1080) {
+      @include d-flex(column-reverse, center, center, 56);
+      padding: 75px 100px 75px 100px;
+    }
+    @include  media (1000) {
+      padding: 50px 80px 50px 80px;
+    }
+
+    @include media (930) {
+      @include d-flex(column-reverse, center, center, 40);
+      padding: 40px 60px 40px 60px;
+    }
+    @include media (500) {
+      gap: 32px;
+      padding: 24px 16px 24px 16px;
+    }
+
+
+  }
+
+  &__box {
+    flex-shrink: 0;
+    opacity: 0.4;
+    border-radius: 8px;
+    width: 372px;
+    height: 280px;
+    backdrop-filter: blur(50px);
+    box-shadow: 10px -34px 150px 1px rgba(22, 28, 62, 0.1);
+    background: linear-gradient(
+      144deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+
+    @include media (1240) {
+      width: 346px;
+      height: 260px
+    }
+
+    @include media (500) {
+      width: 240px;
+      height: 180px;
+    }
+  }
+
+  &__content {
+    @include d-flex(column, unset, unset, 12);
+    max-width: 486px;
+
+    @include media (1080) {
+      @include d-flex(column, center, center, 12);
+      text-align: center;
+    }
+    
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 110%;
+    color: $white;
+
+    @include media(1240) {
+      font-size: 40px;
+    }
+    @include media(1110) {
+      font-size: 36px;
+    }
+    @include media(500) {
+      font-size: 32px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    color: $white;
+  }
+
+  &__button {
+    border-radius: 8px;
+    padding: 9px 18px;
+    width: 130px;
+    height: 40px;
+    box-shadow: 4px 6px 24px 0 rgba(255, 255, 255, 0.08);
+    background: $white;
+    border: 1px solid $white;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: transparent;
+      color: $white;
+    }
+  }
+}

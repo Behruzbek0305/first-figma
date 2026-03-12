@@ -1,0 +1,60 @@
+.paynet {
+  &__wrap {
+    padding: 100px 324px 100px 324px;
+    @include d-flex(column, center, center, 12);
+
+    @include media (1024) {
+        padding: 70px 160px 70px 160px;
+    }
+    @include media (768) {
+        padding: 70px 60px 70px 60px;
+    }
+    @include media (600) {
+        padding: 64px 16px 64px 16px;
+    }
+  }
+
+  &__label {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 139%;
+    text-align: center;
+    color: $dark-blue;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    text-align: center;
+    color: $dark-blue;
+
+    @include media (1024) {
+        font-size: 32px;
+    }
+
+    @include media(600) {
+      font-size: 28px;
+    }
+  }
+
+  &__button {
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 9px 18px;
+    width: 140px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 137%;
+    color: rgb(237, 29, 144);
+    border:  1px solid rgb(237, 29, 144);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        color: $white;
+        background-color: rgb(237, 29, 144);
+    }
+  }
+}
